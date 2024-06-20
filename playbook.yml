@@ -162,13 +162,13 @@
         name: nginx
         state: restarted
 
-    - name: Allow Nginx through firewall
-      firewalld:
-        port: 
-          - "80/tcp"
-          - "443/tcp"
-        permanent: yes
-        state: enabled
+    # - name: Allow Nginx through firewall
+    #   firewalld:
+    #     port: 
+    #       - "80/tcp"
+    #       - "443/tcp"
+    #     permanent: yes
+    #     state: enabled
 
   handlers:
     - name: reload nginx
